@@ -146,9 +146,9 @@ entry:
 Run LLVM IR by Execution Engine 
 
 ```cs
+// Run in Execution Engine //
 LLVM.LinkInMCJIT();
 LLVM.InitializeX86TargetMC();
-
 LLVM.InitializeX86Target();
 LLVM.InitializeX86TargetInfo();
 LLVM.InitializeX86AsmParser();
@@ -157,12 +157,14 @@ LLVM.InitializeX86AsmPrinter();
 LLVMOpaqueExecutionEngine* outEE = null;
 sbyte* outError = null;
 _ = LLVM.CreateExecutionEngineForModule(&outEE, module, &outError);
+
 var main = LLVM.GetNamedFunction(module, "main".ToSbytePointer());
+Console.WriteLine("[Output of Execution Engine]:\n");
 LLVM.RunFunction(outEE, main, 0, null);
 ```
 
 ```
-[Output of JIT Compiler]:
+[Output of Execution Engine]:
 
 Hello World!
 ```
