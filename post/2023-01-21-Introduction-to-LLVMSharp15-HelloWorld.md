@@ -26,7 +26,7 @@ The `.csproj` should like:
 </Project>
 ```
 
-Since the API needs to use `sbyte*`, `LLVMOpaqueType**`, and `LLVMOpaqueValue**`, we create some utility functions first.
+Since the API needs to use `sbyte*`, `LLVMOpaqueType**`, and `LLVMOpaqueValue**`, we create some utility functions:
 
 ```cs
 // string to sbyte* //
@@ -55,19 +55,19 @@ Create context and module
 ```cs
 // Context and Module //
 var context = LLVM.ContextCreate();
-var module = LLVM.ModuleCreateWithNameInContext("Hello World".ToSbytePointer(), context);
+var module  = LLVM.ModuleCreateWithNameInContext("Hello World".ToSbytePointer(), context);
 ```
 
 Declare puts function
 
 ```cs
 // Declare i32 @puts(ptr %0) //
-var putsReturnTy = LLVM.Int32Type();
-var putsName = "puts".ToSbytePointer();
-var putsArgTys = new[] { LLVM.PointerType(LLVM.Int8Type(), 0) };
+var putsReturnTy    = LLVM.Int32Type();
+var putsName        = "puts".ToSbytePointer();
+var putsArgTys      = new[] { LLVM.PointerType(LLVM.Int8Type(), 0) };
 var putsArgTyPtrPtr = putsArgTys.ToLLVMOpaqueTypePtrPtr();
-var putsFuncTy = LLVM.FunctionType(putsReturnTy, putsArgTyPtrPtr, (uint)putsArgTys.Length, 0);
-var putsFunc = LLVM.AddFunction(module, putsName, putsFuncTy);
+var putsFuncTy      = LLVM.FunctionType(putsReturnTy, putsArgTyPtrPtr, (uint)putsArgTys.Length, 0);
+var putsFunc        = LLVM.AddFunction(module, putsName, putsFuncTy);
 LLVM.SetLinkage(putsFunc, LLVMLinkage.LLVMExternalLinkage);
 ```
 
@@ -75,19 +75,19 @@ Declare main function
 
 ```cs
 // Declare i32 @main() //
-var mainName = "main".ToSbytePointer();
-var mainReturnTy = LLVM.Int32Type();
-var mainArgTys = new LLVMOpaqueType*[] { };
+var mainName         = "main".ToSbytePointer();
+var mainReturnTy     = LLVM.Int32Type();
+var mainArgTys       = new LLVMOpaqueType*[] { };
 var mainArgTysPtrPtr = mainArgTys.ToLLVMOpaqueTypePtrPtr();
-var mainFuncTy = LLVM.FunctionType(mainReturnTy, mainArgTysPtrPtr, (uint)mainArgTys.Length, 0);
-var mainFunc = LLVM.AddFunction(module, mainName, mainFuncTy);
+var mainFuncTy       = LLVM.FunctionType(mainReturnTy, mainArgTysPtrPtr, (uint)mainArgTys.Length, 0);
+var mainFunc         = LLVM.AddFunction(module, mainName, mainFuncTy);
 ```
 
 Create basic block under main function
 
 ```cs
 // Create entry basic block in main //
-var entry = LLVM.AppendBasicBlock(mainFunc, "entry".ToSbytePointer());
+var entry   = LLVM.AppendBasicBlock(mainFunc, "entry".ToSbytePointer());
 var builder = LLVM.CreateBuilder();
 LLVM.PositionBuilderAtEnd(builder, entry);
 ```
@@ -97,15 +97,16 @@ Create global string - `"Hello World!"`
 ```cs
 // Create global string //
 var helloWorldStr = "Hello World!".ToSbytePointer();
-var globalString = LLVM.BuildGlobalStringPtr(builder, helloWorldStr, "".ToSbytePointer());
+var globalString  = LLVM.BuildGlobalStringPtr(builder, helloWorldStr, "".ToSbytePointer());
 ```
 
 Create call inst
 
 ```cs
 // Create function call inst //
-var callArgs = new[] { globalString }.ToLLVMOpaqueValuePtrPtr();
-_ = LLVM.BuildCall2(builder, putsFuncTy, putsFunc, callArgs, 1, "".ToSbytePointer());
+var callArgs = new[] { globalString };
+var callArgsPtrPtr = callArgs.ToLLVMOpaqueValuePtrPtr();
+_ = LLVM.BuildCall2(builder, putsFuncTy, putsFunc, callArgsPtrPtr, (uint)callArgs.Length, "".ToSbytePointer());
 ```
 
 Create ret inst 
@@ -121,11 +122,11 @@ Output the LLVM IR
 ```cs
 // Output LLVM IR //
 Console.WriteLine("[Output of LLVM IR]:\n");
-LLVM.DumpModule(module);
+Console.WriteLine(new string(LLVM.PrintModuleToString(module))); // Or LLVM.DumpModule(module);
 Console.WriteLine();
 ```
 
-```ir
+```llvm
 [Output of LLVM IR]:
 
 ; ModuleID = 'Hello World'
