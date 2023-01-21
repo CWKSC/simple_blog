@@ -160,3 +160,9 @@ _ = LLVM.CreateExecutionEngineForModule(&outEE, module, &outError);
 var main = LLVM.GetNamedFunction(module, "main".ToSbytePointer());
 LLVM.RunFunction(outEE, main, 0, null);
 ```
+
+```
+[Output of JIT Compiler]:
+
+Hello World!
+```
