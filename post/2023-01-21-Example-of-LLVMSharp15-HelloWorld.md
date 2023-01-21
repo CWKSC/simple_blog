@@ -1,4 +1,4 @@
-# Introduction to LLVMSharp15 - HelloWorld
+# Example of LLVMSharp15 - HelloWorld
 
 Create a new C# console project, and install libLLVM and LLVMSharp by NuGet (remember to check the pre-release checkbox)
 
@@ -96,15 +96,15 @@ Create global string - `"Hello World!"`
 
 ```cs
 // Create global string //
-var helloWorldStr = "Hello World!".ToSbytePointer();
-var globalString  = LLVM.BuildGlobalStringPtr(builder, helloWorldStr, "".ToSbytePointer());
+var helloWorldString       = "Hello World!".ToSbytePointer();
+var helloWorldGlobalString = LLVM.BuildGlobalStringPtr(builder, helloWorldString, "".ToSbytePointer());
 ```
 
 Create call inst
 
 ```cs
 // Create function call inst //
-var callArgs = new[] { globalString };
+var callArgs = new[] { helloWorldGlobalString };
 var callArgsPtrPtr = callArgs.ToLLVMOpaqueValuePtrPtr();
 _ = LLVM.BuildCall2(builder, putsFuncTy, putsFunc, callArgsPtrPtr, (uint)callArgs.Length, "".ToSbytePointer());
 ```
@@ -122,8 +122,8 @@ Output the LLVM IR
 ```cs
 // Output LLVM IR //
 Console.WriteLine("[Output of LLVM IR]:\n");
-Console.WriteLine(new string(LLVM.PrintModuleToString(module))); // Or LLVM.DumpModule(module);
-Console.WriteLine();
+Console.WriteLine(new string(LLVM.PrintModuleToString(module)));
+// Or LLVM.DumpModule(module);
 ```
 
 ```llvm
@@ -141,4 +141,22 @@ entry:
   %0 = call i32 @puts(ptr @0)
   ret i32 0
 }
+```
+
+Run LLVM IR by Execution Engine 
+
+```cs
+LLVM.LinkInMCJIT();
+LLVM.InitializeX86TargetMC();
+
+LLVM.InitializeX86Target();
+LLVM.InitializeX86TargetInfo();
+LLVM.InitializeX86AsmParser();
+LLVM.InitializeX86AsmPrinter();
+
+LLVMOpaqueExecutionEngine* outEE = null;
+sbyte* outError = null;
+_ = LLVM.CreateExecutionEngineForModule(&outEE, module, &outError);
+var main = LLVM.GetNamedFunction(module, "main".ToSbytePointer());
+LLVM.RunFunction(outEE, main, 0, null);
 ```
