@@ -8,7 +8,7 @@ I am tired of building, maintaining a blog, finding pictures, and other things. 
 
 [2023-01-23 Dont use throw to replace null in parser combinator](post/2023-01-23-Dont-use-throw-to-replace-null-in-parser-combinator.md)
 
-[2023-01-28 Type inference not working in the C# constructor](post/2023-01-28-Type-inference-not-working-in-C#-constructor.md)
+[2023-01-28 Type inference not working in the C# constructor](post\2023-01-28-Type-inference-not-working-in-csharp-constructor.md)
 
 
 
