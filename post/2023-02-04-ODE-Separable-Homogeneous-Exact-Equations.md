@@ -190,10 +190,26 @@ x + k'(y) &= x \\
 k'(y) &= 0 \\
 k(y) &= C \\
 F(x, y) &= x(y + 4) + C\\
-F(x, y) &= C
+\text{Solution is } F(x, y) &= C \\
 x(y + 4) &= C 
 \end{align}
 $$
 
-
 Method 2 (Use $N(x, y)$ first, Then use $M(x, y)$ ):
+
+$$
+\begin{align}
+F(x, y) &= \int N(x, y) dy + k(x) \\
+F(x, y) &= \int x dy + k(x) \\
+&= x y + k(x)\\
+\text{Since } \frac{\partial F}{\partial x} &= M \\
+\frac{\partial }{\partial x} [x y + k(x)] &= y + 4\\
+y + k'(x) &= y + 4 \\
+k'(x) &= 4 \\
+k(x) &= 4x + C \\
+F(x, y) &= xy + 4x + C\\
+\text{Solution is } F(x, y) &= C \\
+xy + 4x &= C \\
+x(y + 4) &= C 
+\end{align}
+$$
