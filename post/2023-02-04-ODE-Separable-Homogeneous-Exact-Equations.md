@@ -155,7 +155,7 @@ $$
 \frac{\partial F}{\partial x} &= M & \frac{\partial F}{\partial y} &= N \\
 F &= \int M dx + k(y) & F &= \int N dy + k(x)  \\
 \frac{\partial F}{\partial y} &= \frac{\partial}{\partial y} [\int M dx + k(y)] & \frac{\partial F}{\partial x} &= \frac{\partial}{\partial x} [\int N dy + k(x)] \\
-N &= \frac{\partial}{\partial y}[ \int M dx + k(y)] & M &= \frac{\partial}{\partial y}[ \int N dy + k(x)]
+N &= \frac{\partial}{\partial y}[ \int M dx + k(y)] & M &= \frac{\partial}{\partial x}[ \int N dy + k(x)]
 \end{align}
 $$
 
@@ -179,7 +179,7 @@ $$
 \text{Since } \frac{\partial M}{\partial y} = 1 = \frac{\partial N}{\partial x}, \text{It is exact} 
 $$
 
-Method 1 (Use $M(x, y)$ first, Then use $N(x, y)$ ):
+Method 1 (Use $M(x, y)$ first, then $N(x, y)$ ):
 
 $$
 \begin{align}
@@ -197,7 +197,7 @@ x(y + 4) &= C
 \end{align}
 $$
 
-Method 2 (Use $N(x, y)$ first, Then use $M(x, y)$ ):
+Method 2 (Use $N(x, y)$ first, then $M(x, y)$ ):
 
 $$
 \begin{align}
