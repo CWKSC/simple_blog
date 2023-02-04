@@ -252,7 +252,7 @@ $$
 解 $(2x^3+3y)dx+(3x+y-1)dy=0$ 
 
 $$
-\frac{\partial M}{\partial y} = 3 = \frac{\partial N}{\partial x} \\\
+\frac{\partial M}{\partial y} = 3 = \frac{\partial N}{\partial x} \\\\
 \text{It is exact} 
 $$
 
@@ -277,7 +277,7 @@ $$
 $$
 
 $$
-\frac{\partial M}{\partial y} = 1 = \frac{\partial N}{\partial x} \\\
+\frac{\partial M}{\partial y} = 1 = \frac{\partial N}{\partial x} \\\\
 \text{It is exact}
 $$
 
