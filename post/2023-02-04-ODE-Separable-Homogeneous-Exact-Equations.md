@@ -184,7 +184,7 @@ Method 1 (Use $M(x, y)$ first, Then use $N(x, y)$ ):
 $$
 \begin{align}
 F(x, y) &= \int M(x, y) dx + k(y) \\
-F(x, y) &= \int (y + 4) dx + k(y) \\
+&= \int (y + 4) dx + k(y) \\
 &= x (y + 4) + k(y)\\
 \text{Since } \frac{\partial F}{\partial y} &= N \\
 \frac{\partial }{\partial y} [x(y + 4) + k(y)] &= x\\
@@ -202,7 +202,7 @@ Method 2 (Use $N(x, y)$ first, Then use $M(x, y)$ ):
 $$
 \begin{align}
 F(x, y) &= \int N(x, y) dy + k(x) \\
-F(x, y) &= \int x dy + k(x) \\
+&= \int x dy + k(x) \\
 &= x y + k(x)\\
 \text{Since } \frac{\partial F}{\partial x} &= M \\
 \frac{\partial }{\partial x} [x y + k(x)] &= y + 4\\
