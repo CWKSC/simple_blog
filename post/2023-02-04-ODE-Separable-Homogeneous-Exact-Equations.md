@@ -44,7 +44,7 @@ $$
 \int_{}^{}g(y)dy = \int_{}^{}f(x)dx 
 $$
 
-例題1：
+### 例題1：
 
 $$
 \begin{align} 
@@ -57,7 +57,7 @@ y &= Cx^5
 \end{align}
 $$
 
-例題2：
+### 例題2：
 
 $$
 \begin{align} 
@@ -68,7 +68,7 @@ y &= Ce^{ax}
 \end{align}
 $$
 
-例題3：
+### 例題3：
 
 $$
 \begin{align} 
@@ -92,7 +92,7 @@ $$
 
 當中 $M(x, y)$ $N(x, y)$ 為同次齊次，則稱為 Homogeneous Differential Equaltions 齊次微分方程式
 
-例題1:
+### 例題1:
 
 Prove $f(x, y) = x^3 + 10 x^2 y + 3xy^2 + y^3$ is homogeneous of degree 3 三次齊次函數
 
@@ -115,7 +115,7 @@ $dx$ 前面的函數 $M(x, y)$ 較簡單， $\text{Let } x = vy, dx = v dy + y d
 
 $dy$ 前面的函數 $N(x, y)$ 較簡單， $\text{Let } y = ux, dy = u dx + x du$ 
 
-例題1:
+### 例題1:
 
 求解 $y dx = (2x + y) dy$
 
@@ -159,7 +159,7 @@ $$
 
 $F = C$ 會是微分方程式的解
 
-例題1:
+### 例題1:
 
 解 $xy' + y + 4 = 0$ 
 
@@ -177,7 +177,7 @@ $$
 \text{Since } \frac{\partial M}{\partial y} = 1 = \frac{\partial N}{\partial x}, \text{It is exact} 
 $$
 
-M1 (Use $M(x, y)$ first, Then use $N(x, y)$ ):
+Method 1 (Use $M(x, y)$ first, Then use $N(x, y)$ ):
 
 $$
 \begin{align}
@@ -194,3 +194,6 @@ F(x, y) &= C
 x(y + 4) &= C 
 \end{align}
 $$
+
+
+Method 2 (Use $N(x, y)$ first, Then use $M(x, y)$ ):
