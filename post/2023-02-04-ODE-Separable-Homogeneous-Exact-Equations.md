@@ -125,7 +125,6 @@ $$
 
 $$
 \begin{align}
-
 y(vdy + y dv) &= (2vy + y) dy \\
 vdy + ydv &= (2v+1) dy \\
 y dv &= (v + 1) dy \\
@@ -134,7 +133,6 @@ ln(v + 1) &= ln y + C\\
 v + 1 &= Cy\\
 \frac{x}{y} + 1 &= Cy\\
 y + x &= C y^2
-
 \end{align}
 $$
 
@@ -152,15 +150,10 @@ $$
 
 $$
 \begin{align} 
-
 \frac{\partial F}{\partial x} &= M & \frac{\partial F}{\partial y} &= N \\
-
 F &= \int M dx + k(y) & F &= \int N dy + k(x)  \\
-
 \frac{\partial F}{\partial y} &= \frac{\partial}{\partial y} [\int M dx + k(y)] & \frac{\partial F}{\partial x} &= \frac{\partial}{\partial x} [\int N dy + k(x)] \\
-
 N &= \frac{\partial}{\partial y}[ \int M dx + k(y)] & M &= \frac{\partial}{\partial y}[ \int N dy + k(x)]
-
 \end{align}
 $$
 
@@ -172,11 +165,9 @@ $$
 
 $$
 \begin{align}
-
 (y + 4) dx + x dy &= 0 \\
 M(x, y) &= y + 4 \\
 N(x, y) &= x
-
 \end{align}
 $$
 
@@ -191,14 +182,11 @@ $$
 F(x, y) &= \int M(x, y) dx + k(y) \\
 F(x, y) &= \int (y + 4) dx + k(y) \\
 &= x (y + 4) + k(y)\\
-
 \text{Since } \frac{\partial F}{\partial y} &= N \\
-
 \frac{\partial }{\partial y} [x(y + 4) + k(y)] &= x\\
 x + k'(y) &= x \\
 k'(y) &= 0 \\
 k(y) &= C \\
-
 F(x, y) &= x(y + 4) + C = C \\
 x(y + 4) &= C 
 \end{align}
