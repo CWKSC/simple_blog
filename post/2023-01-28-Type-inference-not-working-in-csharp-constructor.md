@@ -27,7 +27,7 @@ var foo = new Foo<int>(42);
 
 Straightforwardly, create a static function to solve this problem,
 
-But there still somethings need to care, the wrong way:
+But somethings to care, the wrong way:
 
 ```csharp
 public class Foo<T> {
@@ -39,7 +39,7 @@ public class Foo<T> {
 }
 ```
 
-This is not working because you need call like:
+This not working because you need call like:
 
 ```csharp
 var foo = Foo<int>.New(42);
