@@ -10,9 +10,9 @@
 
 ## Order and Degree 階與次
 
-Order 階是指 $\frac{dy}{dx}$ 的最高階數，$\frac{dy}{dx}$ 是一階， $\frac{d^2y}{dx^2}$ 是二階
+Order 階是指 $\frac{dy}{dx}$ 的最高階數， $\frac{dy}{dx}$ 是一階， $\frac{d^2y}{dx^2}$ 是二階
 
-Degree 次是指 $\frac{dy}{dx}$ 最高的冪數，$\frac{dy}{dx}$ 是一次， $\frac{dy}{dx}^2$ 是二次
+Degree 次是指 $\frac{dy}{dx}$ 最高的冪數， $\frac{dy}{dx}$ 是一次， $\frac{dy}{dx}^2$ 是二次
 
 ## Solution form 解答形式
 
@@ -47,37 +47,37 @@ $$
 例題1：
 
 $$
-\begin{align*} 
+\begin{aligned} 
 x \frac{dy}{dx} &= 5y \\
 x dy &= 5 y dx \\
 \frac{1}{y} dy &= \frac{5}{x} dx \\
 \int \frac{dy}{y} &= 5 \int \frac{dx}{x} \\
 ln y &= 5 ln x + C \\
 y &= Cx^5
-\end{align*}
+\end{aligned}
 $$
 
 例題2：
 
 $$
-\begin{align*} 
+\begin{aligned} 
 y' &= ay \\
 \frac{dy}{y} &= a dx \\
 ln y &= ax + C \\
 y &= Ce^{ax}
-\end{align*}
+\end{aligned}
 $$
 
 例題3：
 
 $$
-\begin{align*} 
+\begin{aligned} 
 y' + ay + b &= 0 \text{, where } a \not= 0 \\
 dy &= -(ay + b) dx \\
 \frac{dy}{y + \frac{b}{a}} &= -a dx \\
 ln(y + \frac{b}{a}) &= -a x + C \\
 y &= Ce^{-ax} - \frac{b}{a}
-\end{align*}
+\end{aligned}
 $$
 
 ## Homogeneous Equations 齊次方程式
@@ -97,12 +97,12 @@ $$
 Prove $f(x, y) = x^3 + 10 x^2 y + 3xy^2 + y^3$ is homogeneous of degree 3 三次齊次函數
 
 $$
-\begin{align*} 
+\begin{aligned} 
 &f(\lambda x, \lambda y) \\
 &= (\lambda x)^3 + 10(\lambda x)^2(\lambda y) + 3 (\lambda x) (\lambda y)^2 + (\lambda y)^3 \\
 &= \lambda^3 x^3 + 10 \lambda^3 x^2 y + 3 \lambda^3 x y^2 + \lambda^3 y^3 \\
 &= \lambda^3 f(x, y)
-\end{align*}
+\end{aligned}
 $$
 
 若果微分方程不能以 可分離方程式 / 分離變數法 求解
@@ -111,9 +111,9 @@ $$
 
 這種形式的方程可經過代換成為可分離，做法如下：
 
-$dx$ 前面的函數 $M(x, y)$ 較簡單，$\text{Let } x = vy, dx = v dy + y dv$
+$dx$ 前面的函數 $M(x, y)$ 較簡單，$ \text{Let } x = vy, dx = v dy + y dv$
 
-$dy$ 前面的函數 $N(x, y)$ 較簡單，$\text{Let } y = ux, dy = u dx + x du$
+$dy$ 前面的函數 $N(x, y)$ 較簡單，$ \text{Let } y = ux, dy = u dx + x du$
 
 例題1:
 
@@ -124,7 +124,9 @@ $$
 $$
 
 $$
-\begin{align*} 
+
+\begin{aligned}
+
 y(vdy + y dv) &= (2vy + y) dy \\
 vdy + ydv &= (2v+1) dy \\
 y dv &= (v + 1) dy \\
@@ -133,7 +135,9 @@ ln(v + 1) &= ln y + C\\
 v + 1 &= Cy\\
 \frac{x}{y} + 1 &= Cy\\
 y + x &= C y^2
-\end{align*}
+
+\end{aligned}
+
 $$
 
 ## Exact Equations 恰當方程式
@@ -149,7 +153,7 @@ $$
 $$
 
 $$
-\begin{align*} 
+\begin{aligned} 
 \frac{\partial F}{\partial x} &= M & \frac{\partial F}{\partial y} &= N \\
 
 F &= \int M dx + k(y) & F &= \int N dy + k(x)  \\
@@ -158,7 +162,7 @@ F &= \int M dx + k(y) & F &= \int N dy + k(x)  \\
 
 N &= \frac{\partial}{\partial y}[ \int M dx + k(y)] & M &= \frac{\partial}{\partial y}[ \int N dy + k(x)]
 
-\end{align*}
+\end{aligned}
 $$
 
 
@@ -169,21 +173,25 @@ $$
 改寫為 $M(x, y) dx + N(x, y) dy = 0$ 的形式
 
 $$
-\begin{align*}
+
+\begin{aligned}
+
 (y + 4) dx + x dy &= 0 \\
 M(x, y) &= y + 4 \\
 N(x, y) &= x
-\end{align*}
+
+\end{aligned}
+
 $$
 
 $$
 \text{Since } \frac{\partial M}{\partial y} = 1 = \frac{\partial N}{\partial x}, \text{It is exact} 
 $$
 
-M1 (Use $M(x, y)$ first, Then use $N(x, y)$):
+M1 (Use $M(x, y)$ first, Then use $N(x, y)$ ):
 
 $$
-\begin{align*}
+\begin{aligned}
 F(x, y) &= \int M(x, y) dx + k(y) \\
 F(x, y) &= \int (y + 4) dx + k(y) \\
 &= x (y + 4) + k(y)\\
@@ -197,5 +205,5 @@ k(y) &= C \\
 
 F(x, y) &= x(y + 4) + C = C \\
 x(y + 4) &= C 
-\end{align*}
+\end{aligned}
 $$
