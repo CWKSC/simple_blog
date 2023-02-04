@@ -16,7 +16,7 @@ I am tired of building, maintaining a blog, finding pictures, and other things. 
 
 ## Math
 
-[2023-02-04 ODE Separable, Homogeneous, Exact Equations](post/2023-02-04-ODE-Separable-Homogeneous-Exact-Equations.md)
+[2023-02-04 ODE Separable, Homogeneous, Exact Equations](post/2023-02-04-ODE-Separable-Homogeneous-Exact-Equations.md) (中)
 
 
 
