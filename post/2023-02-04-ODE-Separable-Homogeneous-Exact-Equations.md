@@ -124,7 +124,6 @@ $$
 $$
 
 $$
-
 \begin{aligned}
 
 y(vdy + y dv) &= (2vy + y) dy \\
@@ -137,7 +136,6 @@ v + 1 &= Cy\\
 y + x &= C y^2
 
 \end{aligned}
-
 $$
 
 ## Exact Equations 恰當方程式
@@ -154,6 +152,7 @@ $$
 
 $$
 \begin{aligned} 
+
 \frac{\partial F}{\partial x} &= M & \frac{\partial F}{\partial y} &= N \\
 
 F &= \int M dx + k(y) & F &= \int N dy + k(x)  \\
@@ -165,15 +164,13 @@ N &= \frac{\partial}{\partial y}[ \int M dx + k(y)] & M &= \frac{\partial}{\part
 \end{aligned}
 $$
 
-
 例題1:
 
-解 $xy' + y + 4 = 0$
+解 $xy' + y + 4 = 0$ 
 
 改寫為 $M(x, y) dx + N(x, y) dy = 0$ 的形式
 
 $$
-
 \begin{aligned}
 
 (y + 4) dx + x dy &= 0 \\
@@ -181,7 +178,6 @@ M(x, y) &= y + 4 \\
 N(x, y) &= x
 
 \end{aligned}
-
 $$
 
 $$
