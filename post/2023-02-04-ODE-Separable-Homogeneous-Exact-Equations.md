@@ -37,11 +37,13 @@ Degree 次是指 $\frac{dy}{dx}$ 最高的冪數， $\frac{dy}{dx}$ 是一次，
 $$
 F(x, y, y') = 0
 $$
+
 $$
 g(y) dy = f(x) dx 
 $$
+
 $$
-\int_{}^{}g(y)dy = \int_{}^{}f(x)dx 
+\int g(y)dy = \int f(x)dx 
 $$
 
 ### 例題1：
@@ -157,7 +159,7 @@ N &= \frac{\partial}{\partial y}[ \int M dx + k(y)] & M &= \frac{\partial}{\part
 \end{align}
 $$
 
-$F = C$ 會是微分方程式的解
+而 $F = C$ 是微分方程式的解
 
 ### 例題1:
 
@@ -211,5 +213,78 @@ F(x, y) &= xy + 4x + C\\
 \text{Solution is } F(x, y) &= C \\
 xy + 4x &= C \\
 x(y + 4) &= C 
+\end{align}
+$$
+
+有另一個比較方便的公式
+
+$$
+\int^{x}_{a} M(x, y) dx + \int^{y}_{b} N(a, y) dy = C
+$$
+
+注意是 $N(a, y)$ 而不是 $N(x, y)$ 
+
+以下公式推導：
+
+$$
+\begin{align}
+F(x, y) &= \int^{x}_{a} M(x, y) dx + k(y) \\
+\frac{\partial F}{\partial y} &= \frac{\partial}{\partial y} [ \int^{x}_{a} M(x, y) dx ] + k'(y) \\
+\frac{\partial F}{\partial y} &= N \\
+N(x, y) &= \int^{x}_{a} \frac{\partial M(x, y)}{\partial y} dx + k'(y) \\
+\frac{\partial M}{\partial y} &= \frac{\partial N}{\partial x} \\
+N(x, y) &= \int^{x}_{a} \frac{\partial N(x, y)}{\partial x} dx + k'(y) \\
+N(x, y) &= N(x, y) - N(a, y) + k'(y) \\
+k'(y) &= N(a, y) \\
+k(y) &= \int^y_b N(a, y) dy
+\end{align}
+$$
+
+$$
+\begin{align}
+F(x, y) &= \int^{x}_{a} M(x, y) dx + k(y) \\
+&= \int^{x}_{a} M(x, y) dx + \int^y_b N(a, y) dy
+\end{align}
+$$
+
+### 例題1:
+
+解 $(2x^3+3y)dx+(3x+y-1)dy=0$ 
+
+$$
+\frac{\partial M}{\partial y} = 3 = \frac{\partial N}{\partial x} \\
+\text{It is exact} 
+$$
+
+$$
+\begin{align}
+\int^{x}_{a} M(x, y) dx + \int^{y}_{b} N(a, y) dy &= C \\
+\int^{x}_{a} (2x^3 + 3y) dx + \int^{y}_{b} (3a + y - 1) dy &= C \\
+\left[  \frac{1}{2} x^4 + 3xy \right]^x_a + \left[ 3ay + \frac{1}{2}y^2 - y \right]^y_b &= C \\
+[\frac{1}{2} x^4 + 3xy - \frac{1}{2}a^4 - 3ay] + [3ay + \frac{1}{2} y^2 - y - 3ab - \frac{1}{2} b^2 + b] &= C \\
+\frac{1}{2} x^4 + 3xy + \frac{1}{2} y^2 - y &= C + \frac{1}{2}a^4 + 3ab + \frac{1}{2} b^2 + b\\
+\frac{1}{2} x^4 + 3xy + \frac{1}{2} y^2 - y &= C \\
+x^4 + 6xy + y^2 - 2y &= C 
+\end{align}
+$$
+
+### 例題2:
+
+解上面做過的 $xy' + y + 4 = 0$ 
+
+$$
+(y + 4) dx + x dy = 0
+$$
+
+$$
+\frac{\partial M}{\partial y} = 1 = \frac{\partial N}{\partial x} \\
+\text{It is exact}
+$$
+
+$$
+\begin{align}
+\int^x_a (y + 4) dx + \int^y_b a dy &= C \\
+\left[ x(y+4) \right]^x_a + \left[ ay \right]^y_b &= C \\
+x(y+4) &= C
 \end{align}
 $$
