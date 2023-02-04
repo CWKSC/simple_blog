@@ -47,37 +47,37 @@ $$
 例題1：
 
 $$
-\begin{aligned} 
+\begin{align} 
 x \frac{dy}{dx} &= 5y \\
 x dy &= 5 y dx \\
 \frac{1}{y} dy &= \frac{5}{x} dx \\
 \int \frac{dy}{y} &= 5 \int \frac{dx}{x} \\
 ln y &= 5 ln x + C \\
 y &= Cx^5
-\end{aligned}
+\end{align}
 $$
 
 例題2：
 
 $$
-\begin{aligned} 
+\begin{align} 
 y' &= ay \\
 \frac{dy}{y} &= a dx \\
 ln y &= ax + C \\
 y &= Ce^{ax}
-\end{aligned}
+\end{align}
 $$
 
 例題3：
 
 $$
-\begin{aligned} 
+\begin{align} 
 y' + ay + b &= 0 \text{, where } a \not= 0 \\
 dy &= -(ay + b) dx \\
 \frac{dy}{y + \frac{b}{a}} &= -a dx \\
 ln(y + \frac{b}{a}) &= -a x + C \\
 y &= Ce^{-ax} - \frac{b}{a}
-\end{aligned}
+\end{align}
 $$
 
 ## Homogeneous Equations 齊次方程式
@@ -97,12 +97,12 @@ $$
 Prove $f(x, y) = x^3 + 10 x^2 y + 3xy^2 + y^3$ is homogeneous of degree 3 三次齊次函數
 
 $$
-\begin{aligned} 
+\begin{align} 
 &f(\lambda x, \lambda y) \\
 &= (\lambda x)^3 + 10(\lambda x)^2(\lambda y) + 3 (\lambda x) (\lambda y)^2 + (\lambda y)^3 \\
 &= \lambda^3 x^3 + 10 \lambda^3 x^2 y + 3 \lambda^3 x y^2 + \lambda^3 y^3 \\
 &= \lambda^3 f(x, y)
-\end{aligned}
+\end{align}
 $$
 
 若果微分方程不能以 可分離方程式 / 分離變數法 求解
@@ -124,7 +124,7 @@ $$
 $$
 
 $$
-\begin{aligned}
+\begin{align}
 
 y(vdy + y dv) &= (2vy + y) dy \\
 vdy + ydv &= (2v+1) dy \\
@@ -135,7 +135,7 @@ v + 1 &= Cy\\
 \frac{x}{y} + 1 &= Cy\\
 y + x &= C y^2
 
-\end{aligned}
+\end{align}
 $$
 
 ## Exact Equations 恰當方程式
@@ -151,7 +151,7 @@ $$
 $$
 
 $$
-\begin{aligned} 
+\begin{align} 
 
 \frac{\partial F}{\partial x} &= M & \frac{\partial F}{\partial y} &= N \\
 
@@ -161,7 +161,7 @@ F &= \int M dx + k(y) & F &= \int N dy + k(x)  \\
 
 N &= \frac{\partial}{\partial y}[ \int M dx + k(y)] & M &= \frac{\partial}{\partial y}[ \int N dy + k(x)]
 
-\end{aligned}
+\end{align}
 $$
 
 例題1:
@@ -171,13 +171,13 @@ $$
 改寫為 $M(x, y) dx + N(x, y) dy = 0$ 的形式
 
 $$
-\begin{aligned}
+\begin{align}
 
 (y + 4) dx + x dy &= 0 \\
 M(x, y) &= y + 4 \\
 N(x, y) &= x
 
-\end{aligned}
+\end{align}
 $$
 
 $$
@@ -187,7 +187,7 @@ $$
 M1 (Use $M(x, y)$ first, Then use $N(x, y)$ ):
 
 $$
-\begin{aligned}
+\begin{align}
 F(x, y) &= \int M(x, y) dx + k(y) \\
 F(x, y) &= \int (y + 4) dx + k(y) \\
 &= x (y + 4) + k(y)\\
@@ -201,5 +201,5 @@ k(y) &= C \\
 
 F(x, y) &= x(y + 4) + C = C \\
 x(y + 4) &= C 
-\end{aligned}
+\end{align}
 $$
