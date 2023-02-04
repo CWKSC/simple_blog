@@ -32,7 +32,7 @@ Degree 次是指 $\frac{dy}{dx}$ 最高的冪數， $\frac{dy}{dx}$ 是一次，
 
 ## Separable Equation 可分離方程式 / 分離變數法
 
-沒什麼特別，把變數分離到方程的兩邊
+把變數分離到方程的兩邊
 
 $$
 F(x, y, y') = 0
@@ -111,9 +111,9 @@ $$
 
 這種形式的方程可經過代換成為可分離，做法如下：
 
-$dx$ 前面的函數 $M(x, y)$ 較簡單，$ \text{Let } x = vy, dx = v dy + y dv$
+$dx$ 前面的函數 $M(x, y)$ 較簡單， $\text{Let } x = vy, dx = v dy + y dv$ 
 
-$dy$ 前面的函數 $N(x, y)$ 較簡單，$ \text{Let } y = ux, dy = u dx + x du$
+$dy$ 前面的函數 $N(x, y)$ 較簡單， $\text{Let } y = ux, dy = u dx + x du$ 
 
 例題1:
 
@@ -157,6 +157,8 @@ N &= \frac{\partial}{\partial y}[ \int M dx + k(y)] & M &= \frac{\partial}{\part
 \end{align}
 $$
 
+$F = C$ 會是微分方程式的解
+
 例題1:
 
 解 $xy' + y + 4 = 0$ 
@@ -187,7 +189,8 @@ F(x, y) &= \int (y + 4) dx + k(y) \\
 x + k'(y) &= x \\
 k'(y) &= 0 \\
 k(y) &= C \\
-F(x, y) &= x(y + 4) + C = C \\
+F(x, y) &= x(y + 4) + C\\
+F(x, y) &= C
 x(y + 4) &= C 
 \end{align}
 $$
