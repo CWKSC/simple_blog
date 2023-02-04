@@ -260,7 +260,8 @@ $$
 \int^{x}_{a} M(x, y) dx + \int^{y}_{b} N(a, y) dy &= C \\
 \int^{x}_{a} (2x^3 + 3y) dx + \int^{y}_{b} (3a + y - 1) dy &= C \\
 \left[  \frac{1}{2} x^4 + 3xy \right]^x_a + \left[ 3ay + \frac{1}{2}y^2 - y \right]^y_b &= C \\
-[\frac{1}{2} x^4 + 3xy - \frac{1}{2}a^4 - 3ay] + [3ay + \frac{1}{2} y^2 - y - 3ab - \frac{1}{2} b^2 + b] &= C \\
+[\frac{1}{2} x^4 + 3xy - \frac{1}{2}a^4 - 3ay] + &  \\
+ [3ay + \frac{1}{2} y^2 - y - 3ab - \frac{1}{2} b^2 + b] &= C \\
 \frac{1}{2} x^4 + 3xy + \frac{1}{2} y^2 - y &= C + \frac{1}{2}a^4 + 3ab + \frac{1}{2} b^2 + b\\
 \frac{1}{2} x^4 + 3xy + \frac{1}{2} y^2 - y &= C \\
 x^4 + 6xy + y^2 - 2y &= C 
