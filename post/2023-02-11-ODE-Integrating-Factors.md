@@ -8,7 +8,7 @@ $$
 \frac{\partial M}{\partial y} \not= \frac{\partial N}{\partial x}
 $$
 
-（Not Exact 不恰當）
+（Not Exact 不恰當，因此無法用恰當方程式的方法去解）
 
 而存在一個非零函數 $\mu(x, y)$ ，令 
 
@@ -16,7 +16,7 @@ $$
 (\mu M) dx + (\mu N) dy = 0
 $$
 
-為 Exact 恰當，$\mu(x, y)$ 則稱為 Integrating Factors 積分因子
+為 Exact 恰當， $\mu(x, y)$ 則稱為 Integrating Factors 積分因子
 
 有至少以下六種方法求 $\mu(x, y)$ 積分因子：
 
