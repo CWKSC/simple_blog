@@ -1,4 +1,4 @@
-上一篇： [Separable, Homogeneous, Exact Equations](post\2023-02-04-ODE-Separable-Homogeneous-Exact-Equations.md)
+上一篇： [Separable, Homogeneous, Exact Equations](2023-02-04-ODE-Separable-Homogeneous-Exact-Equations.md)
 
 # Integrating Factors 積分因子
 
