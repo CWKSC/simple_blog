@@ -18,6 +18,7 @@ I am tired of building, maintaining a blog, finding pictures, and other things. 
 
 [2023-02-04 ODE Separable, Homogeneous, Exact Equations](post/2023-02-04-ODE-Separable-Homogeneous-Exact-Equations.md) (中)
 
+[2023-02-04 ODE Integrating Factors](post/2023-02-11-ODE-Integrating-Factors.md) (中)
 
 
 ## Other
