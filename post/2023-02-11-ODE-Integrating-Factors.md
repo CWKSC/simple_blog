@@ -8,7 +8,9 @@ $\frac{\partial M}{\partial y} \not= \frac{\partial N}{\partial x}$ （Not Exact
 
 而存在一個非零函數 $\mu(x, y)$ 
 
-令 $(\mu M) dx + (\mu N) dy = 0$ 恰當， $\mu(x, y)$ 則稱為積分因子
+令 $(\mu M) dx + (\mu N) dy = 0$ 恰當
+
+$\mu(x, y)$ 則稱為積分因子
 
 有至少以下六種方法求 $\mu(x, y)$ 積分因子：
 
@@ -27,6 +29,7 @@ $$
 $$
 
 若
+
 $$
 \frac{1}{M} (\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y})
 $$
