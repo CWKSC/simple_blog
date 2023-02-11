@@ -25,7 +25,7 @@ $$
 只包括 x ，則
 
 $$
-\mu(x, y) = e^{\int \frac{1}{N} (\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x}) dx}
+\mu = e^{\int \frac{1}{N} (\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x}) dx}
 $$
 
 若
@@ -37,7 +37,7 @@ $$
 只包括 y ，則
 
 $$
-\mu(x, y) = e^{\int \frac{1}{M} (\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}) dy}
+\mu = e^{\int \frac{1}{M} (\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}) dy}
 $$
 
 ### 方法一的證明
@@ -70,19 +70,19 @@ $$
 \frac{\mu(x)}{\partial y} M(x, y) + \mu(x) \frac{\partial M(x, y)}{\partial y} &= \frac{\partial \mu(x)}{\partial x} N(x, y) + \mu(x) \frac{\partial N(x, y)}{\partial x} \\
 0 + \mu(x) \frac{\partial M(x, y)}{\partial y} &= \frac{d \mu(x)}{d x} N(x, y) + \mu(x) \frac{\partial N(x, y)}{\partial x} \\
 \mu(x) \frac{\partial M(x, y)}{\partial y} - \mu(x) \frac{\partial N(x, y)}{\partial x} &= \frac{d \mu(x)}{d x} N(x, y) \\
-\mu(x) [\frac{\partial M(x, y)}{\partial y} - \frac{\partial N(x, y)}{\partial x}] &= \frac{d \mu(x)}{d x} N(x, y) \\
-\frac{1}{N(x, y)} [\frac{\partial M(x, y)}{\partial y} - \frac{\partial N(x, y)}{\partial x}] &= \frac{1}{\mu(x)} \frac{d \mu(x)}{d x} \\
-\frac{1}{N(x, y)} [\frac{\partial M(x, y)}{\partial y} - \frac{\partial N(x, y)}{\partial x}] dx &= \frac{1}{\mu(x)} d \mu(x) \\
-\int \frac{1}{N(x, y)} [\frac{\partial M(x, y)}{\partial y} - \frac{\partial N(x, y)}{\partial x}] dx &= \int \frac{1}{\mu(x)} d \mu(x) \\
-\int \frac{1}{N(x, y)} [\frac{\partial M(x, y)}{\partial y} - \frac{\partial N(x, y)}{\partial x}] dx &= \ln \mu(x) \\
-\mu(x) &= e^{\int \frac{1}{N(x, y)} [\frac{\partial M(x, y)}{\partial y} - \frac{\partial N(x, y)}{\partial x}] dx} \\
+\mu(x) (\frac{\partial M(x, y)}{\partial y} - \frac{\partial N(x, y)}{\partial x}) &= \frac{d \mu(x)}{d x} N(x, y) \\
+\frac{1}{N(x, y)} (\frac{\partial M(x, y)}{\partial y} - \frac{\partial N(x, y)}{\partial x}) &= \frac{1}{\mu(x)} \frac{d \mu(x)}{d x} \\
+\frac{1}{N(x, y)} (\frac{\partial M(x, y)}{\partial y} - \frac{\partial N(x, y)}{\partial x}) dx &= \frac{1}{\mu(x)} d \mu(x) \\
+\int \frac{1}{N(x, y)} (\frac{\partial M(x, y)}{\partial y} - \frac{\partial N(x, y)}{\partial x}) dx &= \int \frac{1}{\mu(x)} d \mu(x) \\
+\int \frac{1}{N(x, y)} (\frac{\partial M(x, y)}{\partial y} - \frac{\partial N(x, y)}{\partial x}) dx &= \ln \mu(x) \\
+\mu(x) &= e^{\int \frac{1}{N(x, y)} (\frac{\partial M(x, y)}{\partial y} - \frac{\partial N(x, y)}{\partial x}) dx} \\
 \end{align}
 $$
 
 同理
 
 $$
-\mu(y) = e^{\int \frac{1}{M(x, y)} [\frac{\partial N(x, y)}{\partial x} - \frac{\partial M(x, y)}{\partial y}] dy} \\
+\mu(y) = e^{\int \frac{1}{M(x, y)} (\frac{\partial N(x, y)}{\partial x} - \frac{\partial M(x, y)}{\partial y}) dy} \\
 $$
 
 ### 例題 1：
