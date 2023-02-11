@@ -10,19 +10,34 @@ $\frac{\partial M}{\partial y} \not= \frac{\partial N}{\partial x}$ （Not Exact
 
 令 $(\mu M) dx + (\mu N) dy = 0$ 恰當， $\mu(x, y)$ 則稱為積分因子
 
-有至少以下六種方法求得 $\mu(x, y)$ 積分因子：
+有至少以下六種方法求 $\mu(x, y)$ 積分因子：
 
-# 方法一（常用）
+## 方法一（常用）
 
-若 $\frac{1}{N} (\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x})$ 只包括 x
+若
 
-則 $\mu(x, y) = e^{\int \frac{1}{N} (\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x}) dx}$
+$$
+\frac{1}{N} (\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x})
+$$
 
-若 $\frac{1}{M} (\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y})$ 只包括 y
+只包括 x ，則
 
-則 $\mu(x, y) = e^{\int \frac{1}{M} (\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}) dy}$
+$$
+\mu(x, y) = e^{\int \frac{1}{N} (\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x}) dx}
+$$
 
-## 方法一的證明
+若
+$$
+\frac{1}{M} (\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y})
+$$
+
+只包括 y ，則
+
+$$
+\mu(x, y) = e^{\int \frac{1}{M} (\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}) dy}
+$$
+
+### 方法一的證明
 
 由於 $(\mu M) dx + (\mu N) dy = 0$ 為恰當
 
@@ -101,7 +116,7 @@ $$
 \end{align}
 $$
 
-# 方法二
+## 方法二
 
 若 $M(x, y) dx + N(x, y) dy = 0$ 為 Homogeneous Equations 齊次方程式
 
@@ -109,13 +124,13 @@ $$
 
 當 $xM + yN = 0$ 時，則 $\mu = \frac{1}{xy}$
 
-# 方法三
+## 方法三
 
 若 $\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x} = f(xy)(Mx - Ny)$
 
 則 $\mu = e^{-\int f(xy) d(xy)}$
 
-# 方法四
+## 方法四
 
 若 $M(x, y) dx + N(x, y) dy = 0$ 可改寫為 $yf(xy) dx + x g(xy) dy$ 的形式
 
@@ -123,7 +138,7 @@ $$
 
 則 $\mu = \frac{1}{xM-yN}$
 
-# 方法五（這個不知道誰會用）
+## 方法五（這個不知道誰會用）
 
 若微分方程式可改寫為
 
@@ -136,6 +151,6 @@ $$
 
 則 $\mu$ 會是 $x^m y^n$ 的形式 （只是形式，不是解）
 
-# 方法六
+## 方法六
 
 查表
