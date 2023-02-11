@@ -4,13 +4,19 @@
 
 若果 $M(x, y) dx + N(x, y) dy = 0$ 中
 
-$\frac{\partial M}{\partial y} \not= \frac{\partial N}{\partial x}$ （Not Exact 不恰當）
+$$
+\frac{\partial M}{\partial y} \not= \frac{\partial N}{\partial x}
+$$
 
-而存在一個非零函數 $\mu(x, y)$ 
+（Not Exact 不恰當）
 
-令 $(\mu M) dx + (\mu N) dy = 0$ 恰當
+而存在一個非零函數 $\mu(x, y)$ ，令 
 
-$\mu(x, y)$ 則稱為積分因子
+$$
+(\mu M) dx + (\mu N) dy = 0
+$$
+
+為 Exact 恰當，$\mu(x, y)$ 則稱為 Integrating Factors 積分因子
 
 有至少以下六種方法求 $\mu(x, y)$ 積分因子：
 
@@ -121,25 +127,55 @@ $$
 
 ## 方法二
 
-若 $M(x, y) dx + N(x, y) dy = 0$ 為 Homogeneous Equations 齊次方程式
+若
 
-當 $xM + yN \not = 0$ 時，則 $\mu = \frac{1}{xM + yN}$
+$$
+M(x, y) dx + N(x, y) dy = 0
+$$
 
-當 $xM + yN = 0$ 時，則 $\mu = \frac{1}{xy}$
+為 Homogeneous Equations 齊次方程式
+
+當 $xM + yN \not = 0$ 時，則
+
+$$
+\mu = \frac{1}{xM + yN}
+$$
+
+當 $xM + yN = 0$ 時，則 
+
+$$
+\mu = \frac{1}{xy}
+$$
 
 ## 方法三
 
-若 $\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x} = f(xy)(Mx - Ny)$
+若
 
-則 $\mu = e^{-\int f(xy) d(xy)}$
+$$
+\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x} = f(xy)(Mx - Ny)
+$$
+
+則
+
+$$
+\mu = e^{-\int f(xy) d(xy)}
+$$
 
 ## 方法四
 
-若 $M(x, y) dx + N(x, y) dy = 0$ 可改寫為 $yf(xy) dx + x g(xy) dy$ 的形式
+若 $M(x, y) dx + N(x, y) dy = 0$ 可改寫為
 
-其中 $f(xy) \not = g(xy)$
+$$
+yf(xy) dx + x g(xy) dy
+$$
 
-則 $\mu = \frac{1}{xM-yN}$
+的形式，其中 $f(xy) \not = g(xy)$
+
+則
+
+$$
+\mu = \frac{1}{xM-yN}
+$$
 
 ## 方法五（這個不知道誰會用）
 
@@ -148,7 +184,6 @@ $$
 $$
 x^ay^b(C_1 y dx + C_2 x dy) + x^c y^d (C_3 y dx + C_4 x dy) = 0
 $$
-
 
 其中 $C_1  C_4 \not = C_2 C_3$ 
 
