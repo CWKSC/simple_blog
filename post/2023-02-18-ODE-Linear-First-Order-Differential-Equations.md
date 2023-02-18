@@ -56,7 +56,7 @@ $$
 \end{align}
 $$
 
-無法使用恰當方程式，需要求積分因子 $\mu(x)$
+無法使用 Exact Equations 恰當方程式，需要求 Integrating Factors 積分因子 $\mu(x)$
 
 $$
 \begin{align}
