@@ -20,6 +20,7 @@ I am tired of building, maintaining a blog, finding pictures, and other things. 
 
 [2023-02-04 ODE Integrating Factors](post/2023-02-11-ODE-Integrating-Factors.md) (中)
 
+[2023-02-18 ODE Linear First Order Differential Equations](post/2023-02-18-ODE-Linear-First-Order-Differential-Equations.md) (中)
 
 ## Other
 
