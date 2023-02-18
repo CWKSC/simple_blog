@@ -44,7 +44,7 @@ $$
 \begin{align}
 y' + P(x)y &= Q(x) \\
 \frac{dy}{dx} &= Q(x) - P(x) y \\
-(Q(x) - P(x) y)dx + dy &= 0
+(P(x) y - Q(x))dx + dy &= 0
 \end{align}
 $$
 
