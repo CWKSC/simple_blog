@@ -88,6 +88,8 @@ F &= \int N dy + k(x) \\
 \end{align}
 $$
 
+聯立兩條方程式
+
 $$
 \left\{
     \begin{matrix}
